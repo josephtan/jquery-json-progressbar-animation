@@ -1,0 +1,52 @@
+/* ###########################################################################
+  Primary Colors
+########################################################################### */
+
+$color-white:#fff;
+$color-black:#000;
+$color-grey:#808080;
+$color-duskgrey:#bcbcbc;
+$color-lightgrey:#dddddd;
+$color-blue:#77bcef;
+$color-darkblue:#507fa1;
+$color-green:#7dba00;
+$color-darkgreen:#548303;
+
+
+$experimental-support-for-svg: true;
+
+/* ###########################################################################
+ Maximum & Minimum layout widths:
+########################################################################### */
+$min_width: 280;
+$max_width: 1024;
+
+
+/* ###########################################################################
+ Breakpoint settings
+########################################################################### */
+$tny_breakpoint: 320px;
+// Tiny Screen, Phone Portrait...
+$tny_breakpoint_inner: $tny_breakpoint - 1;
+$tny_breakpoint_outer: $tny_breakpoint + 1;
+
+$sml_breakpoint: 480px;
+// Small Screen, Phone Landscape...
+$sml_breakpoint_inner: $sml_breakpoint - 1;
+$sml_breakpoint_outer: $sml_breakpoint + 1;
+
+$med_breakpoint: 768px;
+// Medium Screen, Large Phone/Tablet...
+$med_breakpoint_inner: $med_breakpoint - 1;
+$med_breakpoint_outer: $med_breakpoint + 1;
+
+$lrg_breakpoint: 980px;
+// Large Screen, Laptop/Desktop...
+$lrg_breakpoint_inner: $lrg_breakpoint - 1;
+$lrg_breakpoint_outer: $lrg_breakpoint + 1;
+
+$xlg_breakpoint: 1024px;
+// Extra Large Screen, Desktop...
+$xlg_breakpoint_inner: $xlg_breakpoint - 1;
+$xlg_breakpoint_outer: $xlg_breakpoint + 1;
+

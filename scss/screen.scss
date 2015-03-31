@@ -1,0 +1,22 @@
+/*#############
+Author : Joseph Tan
+description:
+module is built with SASS + compass and SMACCS concept
+#############*/
+
+/* ##############
+import compass modules
+###############*/
+
+@import "compass/reset";
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+
+/*################################
+import site styles
+############################*/
+
+@import "variables";
+@import "mixins";
+@import "site/all";

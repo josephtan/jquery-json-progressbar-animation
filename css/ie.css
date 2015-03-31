@@ -1,0 +1,22 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* ###########################################################################
+  Primary Colors
+########################################################################### */
+/* ###########################################################################
+ Maximum & Minimum layout widths:
+########################################################################### */
+/* ###########################################################################
+ Breakpoint settings
+########################################################################### */
+/* line 8, ../scss/ie.scss */
+.lightboxOverlay #bar {
+  background: #77bcef !important;
+}
+/* line 10, ../scss/ie.scss */
+.lightboxOverlay #bar.complete {
+  background: #7dba00 !important;
+}

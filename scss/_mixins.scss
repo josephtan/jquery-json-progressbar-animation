@@ -1,0 +1,147 @@
+///*
+// * Project Mixins:
+// * ---------------------------------------------------------------------------------------------------------------- */
+
+@mixin size($width ,$height) {
+  width: $width;
+  height: $height;
+}
+
+/*! Circle */
+@mixin circle($w:100px, $h:100px, $bg: #000) {
+  width: $w;
+  height: $h;
+  background: $bg;
+  @include border-radius(100%);
+}
+
+
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+/*! Square */
+@mixin square($size) {
+  @include size($size,$size);
+}
+
+
+@mixin font-size($size) {
+  font-size: frmpxtoem($size);
+}
+
+@mixin solidborder1($color){
+  border: 1px solid $color;
+}
+
+///*
+// * Breakpoints: for  responsive design
+// * ------------------------------------------------------------------------------------------------------------------ */
+@mixin tny-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $tny_breakpoint_inner) {
+      @content;
+
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $tny_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $tny_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin sml-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $sml_breakpoint_inner) {
+      @content;
+
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $sml_breakpoint_outer) {
+      @content;
+
+    }
+  } @else {
+    @media (max-width: $sml_breakpoint) {
+      @content;
+
+    }
+  }
+}
+
+@mixin med-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $med_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $med_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $med_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin lrg-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $lrg_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $lrg_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $lrg_breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin xlg-breakpoint($box: '') {
+  @if $box == 'inner' {
+    @media (max-width: $xlg_breakpoint_inner) {
+      @content;
+    }
+  } @else if $box == 'outer' {
+    @media (max-width: $xlg_breakpoint_outer) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $xlg_breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Custom Breakpoint for custom max-width breakpoints
+@mixin ctm-breakpoint($bp: $xlg_breakpoint, $min_max: 'max') {
+  @if $min_max == 'max' {
+    @media (max-width: $bp) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+// Range Breakpoint for custom min-width and max-width range breakpoints
+@mixin rng-breakpoint($min: $tny_breakpoint, $max: $xlg_breakpoint) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin autoMargin() {
+  margin-left: auto;
+  margin-right: auto;
+}

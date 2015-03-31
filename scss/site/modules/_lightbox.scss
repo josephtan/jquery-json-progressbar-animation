@@ -1,0 +1,87 @@
+.lightboxOverlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  min-height: 100%;
+  z-index:10;
+  background:$color-black;
+  @include opacity(0.6);
+
+  .boxHolder{
+    position:absolute;
+    z-index:12;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+  }
+
+  .boxContainer{
+      position: relative;
+      top:40%;
+      display:block;
+      max-width: 580px;
+      height:auto;
+      background:#fff;
+      @include autoMargin;
+      overflow:none;
+      @include solidborder1($color-lightgrey);
+  }
+
+  .progress-title{
+      color: $color-white;
+      padding:10px;
+      background: $color-grey;
+    }
+
+  .close{
+    display: inline-block;
+    @include circle(2,2,$color-duskgrey);
+    margin-top: 2px;
+    padding: 2px 5px;
+    font-weight: 400;
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  h3{display: inline-block; width: 95%}
+
+  .progress-container{ padding: 20px;
+    p{margin-top: 10px; text-align: center; vertical-align: top}
+
+    span.checked{
+      display: inline-block;
+      vertical-align: top;
+      width: 20px;
+      height: 20px;
+      background: url("../images/check.gif") no-repeat;
+    }
+  }
+
+  .progress-bar{
+    display: block;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    font-size: 0;
+    @include solidborder1($color-lightgrey);
+    span{
+
+      padding: 10px 0;
+    }
+
+  }
+
+  #bar{
+
+    @include background( linear-gradient(top, $color-blue, $color-darkblue));
+    &.complete{
+      @include background( linear-gradient(top, $color-green, $color-darkgreen));
+    }
+  }
+
+}
+

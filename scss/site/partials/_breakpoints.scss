@@ -1,0 +1,36 @@
+@include ctm-breakpoint(620px){
+  .lightboxOverlay {
+     .boxContainer {
+        max-width: 80%;
+      }
+    h3{max-width: 90%;}
+  }
+}
+
+
+@include sml-breakpoint() {
+  .lightboxOverlay {
+    .boxContainer {
+      max-width: 80%;
+    }
+    h3{max-width: 85%;}
+  }
+  .container{
+    button{
+      width: 20%;
+    }
+  }
+}
+
+@include tny-breakpoint(){
+
+  .lightboxOverlay{
+    h3{max-width: 85%}
+  }
+
+  .container{
+    button{
+      width: 20%;
+    }
+  }
+}
